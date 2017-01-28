@@ -26,7 +26,7 @@ def send_email(gold_price: float) -> None:
     """
     server = smtplib.SMTP('smtp.live.com', 587)
     server.starttls()
-    server.login(constants.my_email, cosntants.my_password)
+    server.login(constants.my_email, constants.my_password)
     msg = MIMEText('Todays gold price in Delhi - {}'.format(gold_price))
     msg['Subject'] = 'Gold Price'
     msg['From'] constants.my_email
